@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{237BB02B-A6C8-419A-ACA0-9293C40C8323}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToolCategoryDLL</RootNamespace>
+    <AssemblyName>ToolCategoryDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindSortedToolCategoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindSortedToolCategoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindToolCategoryByCategoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindToolCategoryByCategoryDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindToolCategoryByCategoryIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindToolCategoryByCategoryIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindToolCategoryByKeyWordDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindToolCategoryByKeyWordDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertToolCategoryEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertToolCategoryEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ToolCategoryClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToolCategoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolCategoryDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindSortedToolCategoryDataSet.xsc">
+      <DependentUpon>FindSortedToolCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindSortedToolCategoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindSortedToolCategoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindSortedToolCategoryDataSet.xss">
+      <DependentUpon>FindSortedToolCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolCategoryByCategoryDataSet.xsc">
+      <DependentUpon>FindToolCategoryByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolCategoryByCategoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindToolCategoryByCategoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindToolCategoryByCategoryDataSet.xss">
+      <DependentUpon>FindToolCategoryByCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolCategoryByCategoryIDDataSet.xsc">
+      <DependentUpon>FindToolCategoryByCategoryIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolCategoryByCategoryIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindToolCategoryByCategoryIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindToolCategoryByCategoryIDDataSet.xss">
+      <DependentUpon>FindToolCategoryByCategoryIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolCategoryByKeyWordDataSet.xsc">
+      <DependentUpon>FindToolCategoryByKeyWordDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindToolCategoryByKeyWordDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindToolCategoryByKeyWordDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindToolCategoryByKeyWordDataSet.xss">
+      <DependentUpon>FindToolCategoryByKeyWordDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertToolCategoryEntry.xsc">
+      <DependentUpon>InsertToolCategoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertToolCategoryEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertToolCategoryEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertToolCategoryEntry.xss">
+      <DependentUpon>InsertToolCategoryEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ToolCategoryDataSet.xsc">
+      <DependentUpon>ToolCategoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ToolCategoryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ToolCategoryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ToolCategoryDataSet.xss">
+      <DependentUpon>ToolCategoryDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
